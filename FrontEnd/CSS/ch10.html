@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        /* 
+        static : 위치를 지정하지 않을때. left,top등 불가능 static은 부모가 아님
+        relative : 위치를 계산할때. static의 위치에서부터 계산
+        absolute : 원래 위치와 상관없이 위치 지정 가능. 상위요소를 기준으로 위치 결정
+        fixed : 원래 위치와 상관없이. 상위 요소에 영향 x
+        */
+        .cls1{
+            /* position: static; */
+            /* 디폴트값 */
+            position: relative;
+            background-color: red;
+            height: 300px;
+            width: 300px;
+            bottom: 100px;
+        }
+        .cls2{
+            position: absolute;
+            background-color: cyan;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="cls1">
+        <div class="cls2"></div>
+    </div>
+    
+</body>
+</html>
