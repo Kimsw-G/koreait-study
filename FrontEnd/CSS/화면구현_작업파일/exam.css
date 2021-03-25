@@ -1,0 +1,85 @@
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+html, body{padding: 0; margin: 0;}
+
+footer{
+    position: relative;
+    bottom: 0;
+
+    color: white;
+    background-color: black;
+    padding-bottom: 0;
+    height: 100%;
+}
+
+a{
+    border-radius: .25rem;
+    padding: .5rem;
+    transition: all .3s;
+
+    background-color: goldenrod;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    opacity: .6;
+}
+
+.breweries{
+    display: grid;
+    place-items: center;
+}
+
+.breweries>ul{
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(auto-fill, minmax(50%,auto));
+}
+
+.breweries>ul>li {
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.breweries>ul>li>figure{
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.breweries>ul>li>figure>img{
+    position: absolute;
+    top:50;
+    left: 50;
+    height: 100%;
+    width: 100%;
+}
+
+.breweries>ul>li>figure>figcaption{
+    position: absolute; /* static인 부모를 찾아감 */
+    padding: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%; 
+    color: #fff;;
+    padding: .75rem;
+    font-size: 1.25rem;
+}
+.breweries>ul>li>figcaption>figcaption>h3{
+    padding: 0.75rem;
+    font-size: 1.25rem;
+}
+
+
+.breweries>ul>li>a{
+    width: fit-content;
+    margin: 5px;
+}
