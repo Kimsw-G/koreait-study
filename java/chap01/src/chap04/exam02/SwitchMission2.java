@@ -1,4 +1,4 @@
-package chap03.prac01;
+package chap04.exam02;
 
 public class SwitchMission2 {
     public static void main(String[] args) {

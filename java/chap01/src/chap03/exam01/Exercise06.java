@@ -1,4 +1,5 @@
-package chap03.prac01;
+package chap03.exam01;
+
 
 public class Exercise06 {
     public static void main(String[] args) {

@@ -1,7 +1,6 @@
 package chap04.exam01;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class IfMission2 {
     // Female avg h : 163

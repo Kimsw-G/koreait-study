@@ -1,4 +1,4 @@
-package chap04.exam01;
+package chap04.exam03;
 
 public class ForMission1 {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package chap04.exam01;
+package chap04.exam03;
 
-public class ForMission3 {
+public class ForMission2 {
     public static void main(String[] args) {
         char star = '*';
         for(int j=0;j<50;j++){
