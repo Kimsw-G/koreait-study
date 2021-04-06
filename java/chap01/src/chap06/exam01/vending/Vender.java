@@ -25,7 +25,7 @@ public class Vender {
         return buyMenu(sc.nextInt());
     }
     
-    public void printMenu(){
+    public void printMenu(){ // 메뉴 출력바
         Iterator<String> it = set.iterator();
         System.out.println("<Menu>");
         for(int i=1;it.hasNext();i++){
