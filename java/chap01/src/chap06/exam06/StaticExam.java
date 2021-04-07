@@ -5,9 +5,7 @@ public class StaticExam {
         Toy t1 = new Toy();
         Toy t2 = new Toy();
 
-        t1.name = "디즈니";
         System.out.println(t1.name);
-        t2.name = "롯데";
         System.out.println(t2.name);
 
         System.err.println(t1.name);
@@ -17,5 +15,11 @@ public class StaticExam {
 }
 
 class Toy{
-    static String name;
+    static int name;
+
+    Toy(){
+        name++;
+    }
 }
+
+//hello
