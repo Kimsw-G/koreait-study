@@ -1,6 +1,6 @@
 package chap06.exam06;
 
-public class StaticExam {
+public class StaticExam1 {
     public static void main(String[] args) {
         Toy t1 = new Toy();
         Toy t2 = new Toy();
