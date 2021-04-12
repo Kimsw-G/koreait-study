@@ -12,8 +12,9 @@ public class Player {
     List<Card> list = new ArrayList<Card>();
 
     // 생성자. 현금 같이 갱신
-    public Player(int amount){
+    public Player(int amount,String name){
         this.amount = amount;
+        this.name = name;
     }
 
     // 뽑은 카드 저장하기!
@@ -55,7 +56,7 @@ public class Player {
         System.out.println(this.name+"가 졌다!");
         list.clear();
         if(amount<PRICE){ // 금액이 없다!
-            System.out.println(this.name+"은 금액이" +this.amount+"밖에 없다!!");
+            System.out.println(this.name+"은 금액이" +this.amount+"밖에 없다! 눈 앞이 깜깜해졌다!");
             return false;
         }
         System.out.println(this.name+"은 금액이 아직"+this.amount+"남았다!");

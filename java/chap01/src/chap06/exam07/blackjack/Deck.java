@@ -7,41 +7,15 @@ import java.util.List;
 
 public class Deck implements CardDeck{
     // 패턴, 심볼 
-    private String pattern;
-    private String symbol;
     private List<Card> deck = new ArrayList<Card>();
     // 선수 선언
     private Player p1;
     private Player p2;
-
-    // 생성자로 pattern symbol 값 넣기 (시험내용)
-    /*
-    public Card(String pattern, String symbol){
-        this.pattern = pattern;
-        this.symbol = symbol;
-    }
-    */
     
     // 생성자와 함께 선수입장
     public Deck(int p1Amount, int p2Amount){
-        p1 = new Player(p1Amount);
-        p2 = new Player(p2Amount);
-        p1.name = "임요한";
-        p2.name = "홍진호";
-    }
-
-    // getter setter
-    public String getPattern() {
-        return this.pattern;
-    }
-    public void setPattern(String pattern) {
-        this.pattern = pattern;
-    }
-    public String getSymbol() {
-        return this.symbol;
-    }
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
+        p1 = new Player(p1Amount,"임요한");
+        p2 = new Player(p2Amount,"홍진호");
     }
 
     // 메인 실행하기
@@ -54,7 +28,7 @@ public class Deck implements CardDeck{
         for(int i=0;i<2;i++){
             p1.getCard(pcikCard());
             p2.getCard(pcikCard());
-            new Player(0).getCard(pcikCard()); // 허공에 한 장
+            new Player(0,"").getCard(pcikCard()); // 허공에 한 장
         }
         // 16 이하인지 검사하여 또 뽑기
         pickMore(p1);
