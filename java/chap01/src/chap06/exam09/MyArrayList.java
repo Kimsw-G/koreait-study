@@ -1,32 +1,57 @@
 package chap06.exam09;
 
-public class MyArrayList<V> implements MyList<V>, Iterable{
-    private V[] arr;
+import java.lang.reflect.Array;
+
+public class MyArrayList implements MyList{
+    private int[] arr;
 
     public MyArrayList(){
-        Class[] c = new Class[0];
-        arr = (V[])c;
+        arr = new int[0];
     }
 
     @Override
-    public void add(V value){
-
+    public void add(int value){
+        add(arr.length,value); 
+    }
+    @Override
+    public void add(int index, int value){
+        int[] tmp = new int[arr.length+1];
+        for(int i=0,j=0;j<arr.length;i++,j++){
+            if(i==index)i++;
+            tmp[i] = arr[j];
+        }
+        tmp[index] = value;
+        arr = tmp;
     }
 
+    
     @Override
     public int size(){
-
-        return 0;
+        return arr.length;
+    }
+    
+    @Override
+    public int remove(int index){
+        int rs = arr[index];
+        int[] tmp = new int[arr.length-1];
+        for(int i=0,j=0;j<arr.length;i++,j++){
+            if(j==index)j++;
+            tmp[i] = arr[j];
+        }
+        arr = tmp;
+        return rs;
+    }
+    @Override
+    public int remove(){
+        return remove(arr.length-1);
     }
 
     @Override
     public int get(int index){
-
-        return 0;
+        return arr[index];
     }
 
-    @Override
-    public Iterator<V> iterator() {
-        return new RAIterator();
-    }
 }
+// a 0 1 2 3 4
+// j 0 1 3 4
+// i 0 1 2 3

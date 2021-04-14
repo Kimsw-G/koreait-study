@@ -13,5 +13,24 @@ public class ArrayListExam2 {
         list.add(40);
 
         
+        
+        printAll(list);
+        System.out.println(list.remove(2));
+        printAll(list);
+
+        list.add(2, 90);
+        printAll(list);
+        
+    }
+
+    public static void printAll(MyList list){
+        for(int i=0; i<list.size();i++){
+            System.out.println(list.get(i));
+        }    
+        printLine();
+    }
+
+    public static void printLine(){
+        System.out.println("===============================");
     }
 }
