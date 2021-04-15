@@ -46,3 +46,4 @@ CREATE TABLE productTBL(
 desc productTBL;
 select * from productTBL;
 
+-- dddd
