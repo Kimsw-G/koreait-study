@@ -223,5 +223,45 @@ select * from titles where emp_no=110386 and title='technique leader';
 
 select * from dept_emp limit 5;
 
-use java;
+use employees;
 show tables;
+
+select emp_no, gender, if(gender='M','남성','여성') from employees;
+
+select salary, ifnull(salary,0), nullif(salary,70606) from salaries;
+
+-- 조건문 사용
+select
+	case 11
+		when 1 then '일'
+		when 5 then '오'
+		when 10 then '십'
+		else '무엇'
+	end as c_case;
+
+select *,
+	case 
+		when salary >= 80000 then '최고급인력'
+		when salary >= 70000 then '고급인력' 
+		else '저급인력'
+	end
+from salaries;
+
+-- 문자열 자르가
+select 
+	*,
+	concat(first_name,',',last_name,',',gender),
+	concat_ws(',',first_name, last_name)
+from employees;
+
+select format(51515.525235,1);
+
+select * ,insert(dept_no,2,2,'i')
+from dept_emp;
+
+select first_name,last_name,left(first_name,2),right(last_name,3)
+from employees;
+
+-- 빈 칸 채우기
+select first_name, lpad(first_name,10,'#')
+from employees;
