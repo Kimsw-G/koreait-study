@@ -225,3 +225,17 @@ select * from dept_emp limit 5;
 
 use java;
 show tables;
+
+create table t_board(
+	iboard int UNSIGNED PRIMARY KEY,
+	title VARCHAR(100) not NULL,
+	ctnt VARCHAR(500) not NULL,
+	r_dt DATETIME default now()
+);
+desc t_board;
+create table t_cmt(
+	icmt int UNSIGNED PRIMARY KEY,
+	i_board INT UNSIGNED,
+	ctnt VARCHAR(100) NOT NULL,
+	r_dt DATETIME DEFAULT NOW()
+);
