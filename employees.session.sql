@@ -265,3 +265,23 @@ from employees;
 -- 빈 칸 채우기
 select first_name, lpad(first_name,10,'#')
 from employees;
+
+select '        안녕       ' as hello;
+select trim('        안녕       ') as hello;
+select replace('        안   녕       ',' ','!') as hello;
+
+
+select 
+	birth_date,
+	left(birth_date,4) as year,
+	substring(birth_date,6,2) as mon,
+	right(birth_date,2) as day
+from employees; 
+
+select
+	ceil(10.0),
+	ceil(10.1),
+	round(10.4),
+	round(10.5),
+	floor(10.9)
+;
