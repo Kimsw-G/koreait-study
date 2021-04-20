@@ -1,22 +1,27 @@
-<script>
-    var flag = 12 < 10;
-    if(flag){
-        console.log('12<10은 참입니다.');
-    }
-    console.log('끗1');
-    
-    if(flag){
-        console.log('12<10은 참입니다.');
-    }else{
-        console.log('12<10은 거짓입니다.');
-    }
-    console.log('끗2');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calc(cal,n1,n2){
+            return cal(n1,n2);
+        }
+        function sum(n1,n2){
+            return n1+n2;
+        }
+        function minus(n1,n2) {
+            return n1-n2;
+        }
+        var rs = calc(sum,10,20);
+        console.log(rs);
 
-    // 상수 vs 리터럴
-    // 상수 : 할당 후 바뀌지 않는다.
-    // 리터럴 : 값 그 자체
+        console.log(calc(minus,20,10));
 
-    const CON_NUM = 10;
-    // CON_NUM = 12;// 에러가 발생!!
-
-</script>
+    </script>
+</body>
+</html>

@@ -17,16 +17,16 @@
     </DbDiagramOptions>
     <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PageOptions">
       <TopLeftMargins>
-        <Width>10 mm</Width>
-        <Height>10 mm</Height>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
       </TopLeftMargins>
       <BottomRightMargins>
-        <Width>10 mm</Width>
-        <Height>10 mm</Height>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
       </BottomRightMargins>
       <PaperSize>
-        <Width>210 mm</Width>
-        <Height>297 mm</Height>
+        <Width>827 in/100</Width>
+        <Height>1169 in/100</Height>
       </PaperSize>
     </Options>
     <Options xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PrintOptions" />
@@ -54,15 +54,15 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-240 px</X>
-              <Y>-170 px</Y>
+              <X>631 px</X>
+              <Y>230 px</Y>
             </Location>
             <Size>
-              <Width>145 px</Width>
-              <Height>127 px</Height>
+              <Width>175 px</Width>
+              <Height>107 px</Height>
             </Size>
             <DbOid>
-              <Path>modeldb.usertbl</Path>
+              <Path>java.indextbl</Path>
               <TypeName>Table</TypeName>
             </DbOid>
             <Compartments>
@@ -77,15 +77,107 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>260 px</X>
-              <Y>-220 px</Y>
+              <X>841 px</X>
+              <Y>40 px</Y>
+            </Location>
+            <Size>
+              <Width>184 px</Width>
+              <Height>110 px</Height>
+            </Size>
+            <DbOid>
+              <Path>java.membertbl</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>3</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>631 px</X>
+              <Y>40 px</Y>
             </Location>
             <Size>
               <Width>167 px</Width>
-              <Height>140 px</Height>
+              <Height>144 px</Height>
             </Size>
             <DbOid>
-              <Path>modeldb.buytbl</Path>
+              <Path>java.producttbl</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>4</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>1071 px</X>
+              <Y>40 px</Y>
+            </Location>
+            <Size>
+              <Width>147 px</Width>
+              <Height>110 px</Height>
+            </Size>
+            <DbOid>
+              <Path>java.testtbl2</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>5</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>280 px</X>
+              <Y>260 px</Y>
+            </Location>
+            <Size>
+              <Width>156 px</Width>
+              <Height>127 px</Height>
+            </Size>
+            <DbOid>
+              <Path>java.t_class</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>6</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>244 px</X>
+              <Y>40 px</Y>
+            </Location>
+            <Size>
+              <Width>120 px</Width>
+              <Height>127 px</Height>
+            </Size>
+            <DbOid>
+              <Path>java.t_score</Path>
               <TypeName>Table</TypeName>
             </DbOid>
             <Compartments>
@@ -96,81 +188,163 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>3</OID>
-              <Comment>4</Comment>
-              <OutModel>2</OutModel>
-              <InModel>1</InModel>
-              <OutPort>5</OutPort>
-              <InPort>6</InPort>
+              <OID>7</OID>
+              <Comment>8</Comment>
+              <OutModel>6</OutModel>
+              <InModel>5</InModel>
+              <OutPort>9</OutPort>
+              <InPort>10</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>0 px</X>
-                  <Y>80 px</Y>
+                  <X>78 px</X>
+                  <Y>0 px</Y>
                 </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>5</OID>
+                  <OID>9</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
-                  <X>0 px</X>
-                  <Y>60 px</Y>
+                  <X>42 px</X>
+                  <Y>0 px</Y>
                 </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Right</Align>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
                 <CustomProperties>
-                  <OID>6</OID>
+                  <OID>10</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
             </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>140 px</X>
-                <Y>-140 px</Y>
-              </PointD>
-              <PointD>
-                <X>140 px</X>
-                <Y>-110 px</Y>
-              </PointD>
-            </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
-              <Path>modeldb.buytbl.FK_buytbl_usertbl_username</Path>
+              <Path>java.t_score.t_score_ibfk_2</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
           <Model xsi:type="RelationCommentModel">
             <CustomProperties>
-              <OID>4</OID>
-              <HolderModel>3</HolderModel>
-              <Port>7</Port>
+              <OID>8</OID>
+              <HolderModel>7</HolderModel>
+              <Port>11</Port>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>237.5 px</X>
-                  <Y>-30 px</Y>
+                  <X>0 px</X>
+                  <Y>-46.5 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Left</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>7</OID>
+                  <OID>11</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
                 <LinkPortAnchor>OutPoint</LinkPortAnchor>
               </Port>
             </PortAnchors>
             <CommentOffset>
-              <X>109.539978027344 px</X>
-              <Y>30 px</Y>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>12</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>40 px</X>
+              <Y>48 px</Y>
+            </Location>
+            <Size>
+              <Width>144 px</Width>
+              <Height>110 px</Height>
+            </Size>
+            <DbOid>
+              <Path>java.t_student</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>13</OID>
+              <Comment>14</Comment>
+              <OutModel>6</OutModel>
+              <InModel>12</InModel>
+              <OutPort>15</OutPort>
+              <InPort>16</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>-0.5 px</X>
+                  <Y>63.25 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>15</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>143 px</X>
+                  <Y>55.25 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>16</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>java.t_score.t_score_ibfk_1</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>14</OID>
+              <HolderModel>13</HolderModel>
+              <Port>17</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>30 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>17</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
             </CommentOffset>
           </Model>
         </Children>
@@ -178,8 +352,8 @@
           <ScaleMode>Free</ScaleMode>
           <Scale>1</Scale>
           <Location>
-            <X>-819 px</X>
-            <Y>-406 px</Y>
+            <X>-188 px</X>
+            <Y>-215.5 px</Y>
           </Location>
         </ViewPort>
       </Model>

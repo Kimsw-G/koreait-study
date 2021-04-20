@@ -331,4 +331,19 @@ on A.iboard = B.iboard;
 select A.*, B.*
 from t_board A
 left join t_cmt B
-on B.iboard is null;
+on A.iboard = B.iboard
+where icmt is null;
+
+-- 인덱스 조회
+show index from t_score;
+show full tables where table_type like 'view';
+show full tables;
+
+-- 인덱스 생성
+
+-- 뷰 생성
+create view view_abcd as 
+    select * from membertbl
+    where membername like '%이%';
+
+select * from view_abcd;

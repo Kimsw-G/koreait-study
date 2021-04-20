@@ -7,16 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
-        // male : 175.5, female 163.2
-        var gender = 'Male';
-        var height = '178';
-
-        console.log(height==178);
-        console.log(height===178);
-
-       
+        var obj = {
+            name: '홍길동',
+            age: 30,
+            run: function(){
+                console.log('%s가 달린다',this.name);
+            }
+        };
+        console.log(obj);
+        obj.run();
     </script>
 </body>
 </html>

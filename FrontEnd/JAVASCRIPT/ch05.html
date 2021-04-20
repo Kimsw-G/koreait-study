@@ -1,18 +1,39 @@
-<script>
-    var a = 10;
-    var b = '2';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var rs1 = 10>5;
+        console.log(rs1);
+        if(1){
+            console.log('1은 true');
+        }
+        if(0){
+            console.log('0은 true');
+        }else{
+            console.log('0은 false');
+        }
+        if(-2){
+            console.log('-2는 true');
+        }
 
-    console.log(a*b);//20
-    console.log(a+parseInt(b));//12
-    console.log(a+Number(b));//12
+        if(''){
+            console.log('는 true');
+        }else{
+            console.log('는 false');
+        }
 
-    var n1 = 5;
-    var n2 = '66';
-    console.log(n1-n2);
+        if('a'){
+            console.log('a는 true');
+        }else{
+            console.log('a는 false');
+        }
 
-    var s1 = 'hello';
-    console.log(s1-n1);
-
-
-
-</script>
+    </script>
+</body>
+</html>

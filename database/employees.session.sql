@@ -270,6 +270,7 @@ select '        안녕       ' as hello;
 select trim('        안녕       ') as hello;
 select replace('        안   녕       ',' ','!') as hello;
 
+SELECT '        안녕       ',trim('        안녕       '),replace('        안   녕       ',' ','!');
 
 select 
 	birth_date,
