@@ -8,15 +8,15 @@
 </head>
 <body>
     <script>
-        var arr = [10,20,30,40];
-        var rs = arr.map((v)=>{
-            if(v>=30) return v*2;
-            return v;
-        });
-        rs.forEach(element => {
-            console.log(element);
-        });
- 
+
+        var a = 1;
+
+        setTimeout(function() {
+            console.log('1 : '+a);
+        },3000);
+        setTimeout(function() {
+            console.log('2 : '+a++);
+        },1000);
     </script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var fn = (resolve, reject)=>{
+            // resolve('성공'); // 성공~
+            resolve('hlhl');
+            reject('실패'); // 실패~
+        }
+        var proM = new Promise(fn);
+
+        // proM.then((x)=>console.log('성공?'+x),(x)=>console.log('실패?'+x));
+        proM
+        .then((x)=>console.log('성공?'+x))
+        .catch((x)=>{
+            console.log('실패?'+x);
+            throw 'hehe';
+        })
+        .catch(x=>console.log('실패2'+x))
+        .then(x=>console.log('성공2:'+x));
+        
+
+        //
+
+        var pro1 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve('success1');
+            },5000);
+        });
+
+        var pro2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('success2');
+            },3000);
+        })
+
+        pro1.then(v=>{
+            console.log(v);
+        });
+
+        pro2.then(v=>{
+            console.log(v);
+        })
+
+
+    </script>
+</body>
+</html>
