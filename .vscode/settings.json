@@ -26,5 +26,12 @@
             "username": "root",
             "password": "koreait"
         }
+    ],
+    "java.project.sourcePaths": [
+        "java/chap01/src"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Administrator\\Downloads\\mariadb-java-client-2.7.2.jar"
     ]
 }
