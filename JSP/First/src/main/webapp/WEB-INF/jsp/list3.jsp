@@ -8,8 +8,7 @@
 </head>
 <body>
 	
-	${"안녕세상"}
-	<div><a href="examJS.jsp">자바스크립트 연습</a></div>
-	
+	${name }<br>
+	${age }
 </body>
 </html>

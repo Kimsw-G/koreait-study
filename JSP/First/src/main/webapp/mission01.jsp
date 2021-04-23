@@ -7,9 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<div>스크립틀릿 개념 이해</div>
+	<div></div>
 	
-	${"안녕세상"}
-	<div><a href="examJS.jsp">자바스크립트 연습</a></div>
-	
+<%
+	for(int i=1;i<=10;i++){
+%>
+	<div><%=i %></div>
+<%
+	}
+%>
 </body>
 </html>

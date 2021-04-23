@@ -4,12 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>list2</title>
 </head>
 <body>
-	
-	${"안녕세상"}
-	<div><a href="examJS.jsp">자바스크립트 연습</a></div>
-	
+	안녕 나는 new.jsp
 </body>
 </html>
