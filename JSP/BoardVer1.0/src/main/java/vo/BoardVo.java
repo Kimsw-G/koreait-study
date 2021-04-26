@@ -21,6 +21,7 @@ public class BoardVo {
 		return ctnt;
 	}
 	public void setCtnt(String ctnt) {
+		
 		this.ctnt = ctnt;
 	}
 	

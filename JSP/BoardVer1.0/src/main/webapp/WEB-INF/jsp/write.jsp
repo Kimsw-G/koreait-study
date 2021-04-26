@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>글쓰기</h1>
-	<form action="/list" method="post">
+	<form action="/write" method="post">
 		<div>
 			<label for="title">제목 : </label><input type="text" name="title" />
 		</div>
