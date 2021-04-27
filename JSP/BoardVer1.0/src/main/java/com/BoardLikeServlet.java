@@ -7,22 +7,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/detail")
-public class BoardDetailServlet extends HttpServlet {
+import vo.BoardVo;
+
+@WebServlet("/like")
+public class BoardLikeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO : get방식으로 받은 번호를 이용하여, 원하는 글 내용이 담긴 BoardVo 가져오기
-		int no = Integer.parseInt(request.getParameter("no")); // 글 번호!
-		// vo로 BoardVo 보내기!
-		request.setAttribute("vo", Database.list.get(no-1));
-		request.setAttribute("no", no); // 글 번호 정보 보내기!!
 		
-		request.getRequestDispatcher("/WEB-INF/jsp/detail.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		int no = Integer.parseInt(request.getParameter("no")); // 게시글 번호가 반환
+		BoardVo vo = Database.list.get(no-1); // list는 번호 -1
+		vo.plusLike();
+		
+		String uri = "/detail?no="+no; // 
+		response.sendRedirect(uri);
 	}
 
 }

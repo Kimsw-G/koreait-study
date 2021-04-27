@@ -15,7 +15,7 @@
 	<div>
 		<label for="ctnt">내용 : </label><input type="text" name="ctnt" value="${vo.getCtnt()}"/>		
 	</div>
-	<input type="hidden" name="iboard" value="">
+	<input type="hidden" name="no" value="${no}">
 	<input type="submit" value="수정"/>
 </form>
 </body>

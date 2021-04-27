@@ -10,14 +10,21 @@
 <body>
 	제목 : ${vo.getTitle() }<br>
 	내용
-	${vo.getCtnt()}
+	${vo.getCtnt()}<br>
+	
+	추천수 : ${vo.getLike()}
+	<form action="/like" method="post">
+		<input type="hidden" name="no" value="${no}"/>
+		<input type="submit" value="좋아요"/>
+	</form>
+	
 	<form action="/delete" method="post">
-		<input type="hidden" name="no" value="${vo.getIboard()}"/>
+		<input type="hidden" name="no" value="${no}"/>
 		<input type="submit" value="삭제"/>
 	</form>
 	
-	<form action="/modify" method="post">
-		<input type="hidden" name="no" value="${vo.getIboard()}"/>
+	<form action="/modify" method="get">
+		<input type="hidden" name="no" value="${no}"/>
 		<input type="submit" value="수정"/>
 	</form>
 	

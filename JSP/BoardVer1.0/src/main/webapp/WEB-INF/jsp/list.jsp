@@ -18,10 +18,10 @@
 		<tr>
 			<td><b>no</b>
 			<td><b>제목</b>
-	<c:forEach var="vo" items="${list}">
+	<c:forEach var="i" begin="1" end="${list.size()}">
 		<tr>
-			<td>${vo.getIboard()}
-			<td><a href="/detail?no=${vo.getIboard()-1}">${vo.getTitle()}</a>
+			<td>${i}
+			<td><a href="/detail?no=${i}">${list.get(i-1).getTitle()}</a>
 	</c:forEach>
 	</table>
 </body>
