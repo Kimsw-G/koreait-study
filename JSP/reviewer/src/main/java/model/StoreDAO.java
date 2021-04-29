@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 
 public class StoreDAO {
 	
-	
+	final int PAGELEN = 10;
 	Connection con;
 	PreparedStatement pstmt;
 	ResultSet rs;
@@ -50,13 +50,22 @@ public class StoreDAO {
 		}
 	}
 	
-	public List<StoreVo> selectStore(){
+	public List<StoreVo> selectStore(int page){
 		List<StoreVo> list = new ArrayList<StoreVo>();
 		ReviewDAO rd = new ReviewDAO();
+		page--;//편한 연산을 위해 -1 하기
 		try {
 			getCon();
-			String sql = "select * from store";
-			pstmt = con.prepareStatement(sql);
+			if(page == 0) {
+				String sql = "select * from store order by storekey desc limit ?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, PAGELEN);
+			}else {
+				String sql = "select * from store order by storekey desc limit ?,?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, page*PAGELEN);
+				pstmt.setInt(2, PAGELEN);
+			}
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
@@ -76,14 +85,31 @@ public class StoreDAO {
 		return list;
 	}
 	
+	public int getPageSize() {
+		int cnt = 0;
+		try {
+			getCon();
+			String sql = "select count(*) as cnt from store"; // 게시물이 몇개인지 반환!
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				cnt = rs.getInt("cnt");
+			}
+			con.close();
+		} catch (Exception e) {
+			System.out.println("못구했지롱");
+		}
+		return 1+cnt/PAGELEN;
+	}
+	
 	public List<StoreVo> selectSepStore(String key,String value){
 		List<StoreVo> list = new ArrayList<StoreVo>();
 		ReviewDAO rd = new ReviewDAO();
 		try {
 			getCon();
-			String sql = "select * from store where "+key+"=?";
+			String sql = "select * from store where "+key+" like ?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, value);
+			pstmt.setString(1, "%"+value+"%");
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {

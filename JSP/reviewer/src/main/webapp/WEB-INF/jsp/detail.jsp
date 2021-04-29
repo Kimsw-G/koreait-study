@@ -20,6 +20,9 @@
 		<c:forEach begin="1" end="${review.star}">
 			&#9733
 		</c:forEach>
+		<c:if test="">
+				
+		</c:if>
 		) : ${review.ctnt}
 	</c:forEach>
 	</ul>

@@ -18,10 +18,19 @@ public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		int page = 1;
+		try {
+			page = Integer.parseInt(request.getParameter("page"));
+		} catch (NumberFormatException e) {
+		}
+		
+		System.out.println(page);
 		StoreDAO sd = new StoreDAO();
-		List<StoreVo> list = sd.selectStore();
+		List<StoreVo> list = sd.selectStore(page);
+		int size = sd.getPageSize();
 		
 		request.setAttribute("list", list);
+		request.setAttribute("size", size);
 		
 		request.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(request, response);
 	}
@@ -34,6 +43,9 @@ public class HelloServlet extends HttpServlet {
 		
 		StoreDAO sd = new StoreDAO();
 		List<StoreVo> list = sd.selectSepStore(key, value);
+		int size = sd.getPageSize();
+		
+		request.setAttribute("size", size);
 		request.setAttribute("list", list);
 		
 		request.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(request, response);

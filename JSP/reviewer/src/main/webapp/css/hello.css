@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.search{
+	display: flex;
+	justify-content: center;
+}
+
+.main{
+	display: flex;
+	justify-content: center;
+}
+.main a{
+	color: black;
+	text-decoration: none;
+}
+
+.main table{
+	width: 100%;
+}
+.main table tr td:nth-child(3){
+	text-align: left;
+}
+
+.main table tr{
+	text-align: center;	
+}
+/*table의 첫번째 목록*/
+.main table tr:first-child{
+	font-weight: bold;
+}
+.main table tr:first-child td:nth-child(3){
+	text-align: center;
+}
+
+
+.button{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.page{
+	display: flex;
+	justify-content: center;
+}
