@@ -35,10 +35,10 @@
 				<td>분류
 				<td>별점
 		<c:forEach items="${list}" var="vo">
-			<tr>
+			<tr onclick="/detail?key=${vo.storeKey}">
 				<td>${vo.storeKey}
-				<td><a href="/detail?key=${vo.storeKey}">${vo.name}</a>
-				<td><a href="/detail?key=${vo.storeKey}">${vo.ctnt}</a>
+				<td>${vo.name}
+				<td>${vo.ctnt}
 				<td>${vo.ftype}
 				<%--
 				 <td><fmt:formatNumber value="${vo.avg}" maxFractionDigits="1"/>			
