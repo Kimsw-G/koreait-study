@@ -27,7 +27,9 @@ public class DetailServlet extends HttpServlet {
 		request.setAttribute("store", store);
 		request.setAttribute("list", list);
 		
-		request.getRequestDispatcher("/WEB-INF/jsp/detail.jsp").forward(request, response);
+		// 조회수를 ++
+		// 
+		request.getRequestDispatcher("/WEB-INF/jsp/detail.jsp").forward(request, response);  // 페이지를 보여주는 순간
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

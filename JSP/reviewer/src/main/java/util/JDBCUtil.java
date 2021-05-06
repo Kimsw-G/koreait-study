@@ -21,7 +21,6 @@ public class JDBCUtil {
 			Class.forName(DRIVER);
 			con = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
 			
-			System.out.println("연결 성공!!");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("ㄴㄴ");

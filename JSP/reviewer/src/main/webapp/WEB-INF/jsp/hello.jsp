@@ -35,7 +35,7 @@
 				<td>분류
 				<td>별점
 		<c:forEach items="${list}" var="vo">
-			<tr onclick="/detail?key=${vo.storeKey}">
+			<tr onclick="location.href='/detail?key=${vo.storeKey}'">
 				<td>${vo.storeKey}
 				<td>${vo.name}
 				<td>${vo.ctnt}
