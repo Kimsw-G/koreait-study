@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.ReviewDAO;
 import model.ReviewVo;
@@ -28,7 +29,11 @@ public class DetailServlet extends HttpServlet {
 		request.setAttribute("list", list);
 		
 		// 조회수를 ++
-		// 
+		//
+		
+		// 아이디를 확인하고 로그인 하는 DAO 메소드 boolean 
+
+		
 		request.getRequestDispatcher("/WEB-INF/jsp/detail.jsp").forward(request, response);  // 페이지를 보여주는 순간
 	}
 
