@@ -32,7 +32,7 @@ public class HelloServlet extends HttpServlet {
 		request.setAttribute("list", list);
 		request.setAttribute("size", size);
 		
-		request.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(request, response);
+		request.getRequestDispatcher("hello").forward(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
@@ -48,7 +48,7 @@ public class HelloServlet extends HttpServlet {
 		request.setAttribute("size", size);
 		request.setAttribute("list", list);
 		
-		request.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(request, response);
+		request.getRequestDispatcher("hello").forward(request, response);
 	}
 
 }

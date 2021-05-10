@@ -34,10 +34,11 @@ public class DetailServlet extends HttpServlet {
 		// 아이디를 확인하고 로그인 하는 DAO 메소드 boolean 
 
 		
-		request.getRequestDispatcher("/WEB-INF/jsp/detail.jsp").forward(request, response);  // 페이지를 보여주는 순간
+		request.getRequestDispatcher("detail").forward(request, response);  // 페이지를 보여주는 순간
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 댓글 기능 구현!!
 		request.setCharacterEncoding("utf-8");
 		int key = Integer.parseInt(request.getParameter("key"));
 		

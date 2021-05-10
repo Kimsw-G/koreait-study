@@ -19,7 +19,11 @@ public class RegiServlet extends HttpServlet {
 		request.setAttribute("ftype", ftype);
 		
 		request.setCharacterEncoding("UTF-8");
-		request.getRequestDispatcher("/WEB-INF/jsp/regi.jsp").forward(request, response);
+		request.getRequestDispatcher("regi").forward(request, response);
+		
+		// 
+		
+		
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
