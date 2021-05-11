@@ -155,7 +155,7 @@
 
       <Context docBase="seatapp" path="/" reloadable="true" source="org.eclipse.jst.jee.server:seatapp"/>
       
-      </Host>
+      <Context docBase="helloSec" path="/helloSec" reloadable="true" source="org.eclipse.jst.jee.server:helloSec"/></Host>
     </Engine>
   </Service>
 </Server>
