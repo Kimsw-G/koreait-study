@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="First">
+        
+    <wb-module deploy-name="BoardVer0.0">
+                
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <property name="context-root" value="First"/>
-        <property name="java-output-path" value="/First/build/classes"/>
+                
+        <property name="java-output-path" value="/BoardVer0.0/build/classes"/>
+        <property name="context-root" value="BoardVer0.0"/>
+            
     </wb-module>
+    
 </project-modules>
